@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* --- Fonts --- */
+  --font-dm: "DM Sans", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+
+  /* --- Neutral Colors --- */
+  --color-neutral-900: #02012c;
+  --color-neutral-800: #262540;
+  --color-neutral-700: #302f4a;
+  --color-neutral-600: #3c3b5e;
+  --color-neutral-300: #acacb7;
+  --color-neutral-200: #d4d3d9;
+  --color-neutral-0: #ffffff;
+
+  /* --- Orange Colors --- */
+  --color-orange-500: #ff820a;
+
+  /* --- Blue Colors --- */
+  --color-blue-500: #4658d9;
+  --color-blue-700: #2b1b9c;
+
+  /* --- Radius --- */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
+}
+
+@utility text-preset-1 {
+  font-family: var(--font-dm);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: -2px;
+}
+
+@utility text-preset-2 {
+  font-family: var(--font-bricolage);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-3 {
+  font-family: var(--font-dm);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-4 {
+  font-family: var(--font-dm);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-5 {
+  font-family: var(--font-dm);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-5-medium {
+  font-family: var(--font-dm);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-6 {
+  font-family: var(--font-dm);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-7 {
+  font-family: var(--font-dm);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-8 {
+  font-family: var(--font-dm);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility animation-spin {
+  animation: spin 3s linear infinite;
+}
+
+@utility weather-gradient {
+  background-image: "linear-gradient(94deg,#4658D9-8.59%,#2B1B9C98.38%)";
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 20px;
+}
