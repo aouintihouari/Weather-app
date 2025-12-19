@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import {
   Header,
   Units,
@@ -14,7 +13,7 @@ import {
 
 const App = () => {
   const [showUnits, setShowUnits] = useState(false);
-  const [switchUnits, setSwitchUnits] = useState(false);
+  const [switchUnits, setSwitchUnits] = useState(false); // false = metric, true = imperial
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,8 +25,9 @@ const App = () => {
 
   const fetchWeather = async (lat, lon) => {
     try {
+      // Added: apparent_temperature, precipitation, wind_speed_10m, relative_humidity_2m
       const response = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,is_day,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`,
+        `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,is_day,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`,
       );
       const data = await response.json();
       setWeatherData(data);
@@ -78,7 +78,7 @@ const App = () => {
     <>
       <main
         onClick={showUnits ? () => setShowUnits(false) : null}
-        className="font-dm text-neutral-0 relative min-h-screen min-w-screen overflow-x-hidden bg-neutral-900"
+        className="font-dm text-neutral-0 relative min-h-screen overflow-x-hidden bg-neutral-900"
       >
         <Header onShowUnits={setShowUnits} />
         {error ? (
@@ -110,7 +110,11 @@ const App = () => {
           </>
         )}
         {selectedCity && weatherData && (
-          <Body city={selectedCity} weather={weatherData} />
+          <Body
+            city={selectedCity}
+            weather={weatherData}
+            isMetric={!switchUnits}
+          />
         )}
       </main>
       <Units

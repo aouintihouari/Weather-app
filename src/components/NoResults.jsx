@@ -7,7 +7,7 @@ const NoResults = ({ isLoading, query, results }) => {
             No search result found!
           </p>
         </div>
-      )}{" "}
+      )}
     </>
   );
 };

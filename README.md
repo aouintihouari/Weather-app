@@ -1,16 +1,45 @@
-# React + Vite
+# 🌦️ Modern React Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+A sleek, responsive weather dashboard built with React and Tailwind CSS. This application provides real-time weather data, detailed hourly forecasts with day filtering, and 7-day predictions using the Open-Meteo API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![App Screenshot](./preview.jpg)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Real-time Weather Data**: Fetches current conditions including temperature, humidity, wind speed, and precipitation.
+- **Hourly Forecast**: Detailed hourly breakdown.
+  - **Smart Filtering**: Displays remaining hours for the current day and full 24h cycles for future dates.
+  - **Day Dropdown**: Navigate through the next 7 days to see specific hourly data.
+- **7-Day Forecast**: Daily summary for the upcoming week.
+- **City Search**: Autocomplete search functionality to find cities globally.
+- **Unit Conversion**: Toggle seamlessly between Metric (°C, km/h) and Imperial (°F, mph) systems.
+- **Responsive Design**: Fully optimized for desktop and mobile devices.
+- **Dark Mode UI**: A modern, clean dark interface with custom weather icons.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Library**: React.js (Hooks: `useState`, `useEffect`, `useMemo`, `useRef`)
+- **Styling**: Tailwind CSS
+- **Data Source**: [Open-Meteo API](https://open-meteo.com/) (No API Key required)
+- **Build Tool**: Vite
+- **Icons**: Custom 3D-style weather assets
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Make sure you have **Node.js** installed on your machine.
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/aouintihouari/Weather-app.git](https://github.com/aouintihouari/Weather-app.git)
+   cd weather-app
+   ```
